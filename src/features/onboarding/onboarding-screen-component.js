@@ -1,12 +1,13 @@
-import { Button, Input } from '@rneui/themed';
-import { StyleSheet, View, KeyboardAvoidingView, Platform } from 'react-native';
+import { router } from 'expo-router';
+import { KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import { darkColors } from '../styles/colors';
 import { OnboardingFormContainer } from './onboarding-form-container';
-export function OnboardingScreenComponent({}) {
+export function OnboardingScreenComponent({ userUpdated, profileName }) {
   const onSubmit = (name) => {
-    console.log('Submitted:', name);
+    userUpdated({ name });
+    router.navigate('profile');
   };
+
   return (
     <SafeAreaProvider>
       <KeyboardAvoidingView
@@ -15,7 +16,10 @@ export function OnboardingScreenComponent({}) {
         style={styles.container}
       >
         <SafeAreaView style={styles.safeArea}>
-          <OnboardingFormContainer onSubmit={onSubmit} />
+          <OnboardingFormContainer
+            onSubmit={onSubmit}
+            profileName={profileName}
+          />
         </SafeAreaView>
       </KeyboardAvoidingView>
     </SafeAreaProvider>

@@ -3,7 +3,9 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@features/*": ["./src/features/*"],
+      "@redux/*": ["./src/redux/*"]
     }
   },
   "include": [

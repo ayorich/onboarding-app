@@ -2,8 +2,12 @@ import { useState } from 'react';
 
 import { OnboardingFormComponent } from './onboarding-form-component';
 
-export const OnboardingFormContainer = ({ onSubmit, message, ...props }) => {
-  const [name, setName] = useState(message);
+export const OnboardingFormContainer = ({
+  onSubmit,
+  profileName,
+  ...props
+}) => {
+  const [name, setName] = useState(profileName);
 
   return (
     <OnboardingFormComponent

@@ -1,7 +1,9 @@
+import {
+  reducer as profileReducer,
+  slice as profileSlice,
+} from '@features/profile/profile-reducer';
 import { combineReducers } from '@reduxjs/toolkit';
 
 export const rootReducer = combineReducers({
-  ['temp-not-used-to-avoid-crash']: (state = {}) => state,
+  [profileSlice]: profileReducer,
 });
-
-export const rootState = rootReducer(undefined, { type: '' });

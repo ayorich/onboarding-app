@@ -9,7 +9,7 @@ import { rootSaga } from './root-saga';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: [],
+  whitelist: ['profile'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

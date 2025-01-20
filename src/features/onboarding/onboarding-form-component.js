@@ -1,6 +1,5 @@
 import { Button, Input } from '@rneui/themed';
-import { StyleSheet, View, KeyboardAvoidingView, Platform } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet } from 'react-native';
 
 export function OnboardingFormComponent({ name, onChangeText, onSubmit }) {
   return (
@@ -12,7 +11,7 @@ export function OnboardingFormComponent({ name, onChangeText, onSubmit }) {
         onChangeText={onChangeText}
       />
       <Button size="lg" onPress={() => onSubmit(name.trim())}>
-        Submit Name
+        {name ? 'Update' : 'Submit Name'}
       </Button>
     </>
   );
