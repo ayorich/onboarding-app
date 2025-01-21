@@ -1,11 +1,10 @@
 import { compose } from '@reduxjs/toolkit';
 import { connect } from 'react-redux';
 
-import { getUserName, userUpdated } from '../profile/profile-reducer';
+import { selectUserName, userUpdated } from '../profile/profile-reducer';
 import { OnboardingScreenComponent } from './onboarding-screen-component';
-
 const mapStateToProps = (state) => ({
-  profileName: getUserName(state),
+  profileName: selectUserName(state),
 });
 
 const mapDispatchToProps = {

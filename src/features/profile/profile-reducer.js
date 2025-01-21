@@ -23,6 +23,6 @@ export const {
 
 const getProfileSlice = (state) => state[slice];
 
-const getUserName = pipe(getProfileSlice, prop('name'));
+const selectUserName = pipe(getProfileSlice, prop('name'));
 
-export { getUserName, slice };
+export { selectUserName, slice };
