@@ -1,9 +1,9 @@
-import { compose } from '@reduxjs/toolkit';
-import { connect } from 'react-redux';
-import { useEffectOnce } from './use-effect-once';
-import { UsersScreenComponent } from './users-component';
-import { selectUsers } from './users-reducer';
-import { loadUsers } from './users-saga';
+import { compose } from "@reduxjs/toolkit";
+import { connect } from "react-redux";
+import { useEffectOnce } from "./use-effect-once";
+import { UsersScreenComponent } from "./users-component";
+import { selectUsers } from "./users-reducer";
+import { loadUsers } from "./users-saga";
 
 const mapStateToProps = (state) => ({
   users: selectUsers(state),
@@ -22,5 +22,5 @@ function UsersScreenContainer({ loadUsers, ...props }) {
 }
 
 export default compose(connect(mapStateToProps, mapDispatchToProps))(
-  UsersScreenContainer
+  UsersScreenContainer,
 );
