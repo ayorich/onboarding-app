@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.onboarding.app"
     },
     "android": {
       "adaptiveIcon": {
@@ -36,6 +37,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3ec7e830-1c58-44cc-8a30-108b8ec555e5"
+      }
+    },
+    "owner": "ayorich"
   }
 }

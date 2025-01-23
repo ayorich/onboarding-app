@@ -1,9 +1,10 @@
-import { Button, Input } from '@rneui/themed';
+import { Button, Input, Text } from '@rneui/themed';
 import { StyleSheet } from 'react-native';
 
 export function OnboardingFormComponent({ name, onChangeText, onSubmit }) {
   return (
     <>
+      <Text>Submit</Text>
       <Input
         placeholder="Enter Name"
         style={styles.input}
