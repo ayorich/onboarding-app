@@ -1,6 +1,6 @@
-import { Button, Text } from "@rneui/themed";
-import { FlatList, StyleSheet, View } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { Button, Text } from '@rneui/themed';
+import { FlatList, StyleSheet, View } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 const Item = ({ address, name }) => (
   <View style={styles.item}>
@@ -9,17 +9,17 @@ const Item = ({ address, name }) => (
   </View>
 );
 
-export function UsersScreenComponent({ users, loadUsers }) {
+export function UsersScreenComponent({ users, loadUsers, loading }) {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
         <FlatList
           data={users}
           renderItem={({ item }) => <Item {...item} />}
-          keyExtractor={(item) => item.id}
+          keyExtractor={item => item.id}
         />
 
-        <Button size="lg" onPress={loadUsers}>
+        <Button size="lg" onPress={loadUsers} loading={loading}>
           Refetch Users
         </Button>
       </SafeAreaView>
@@ -29,27 +29,27 @@ export function UsersScreenComponent({ users, loadUsers }) {
 
 const styles = StyleSheet.create({
   safeArea: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     flex: 1,
     padding: 16,
   },
   text: {
     lineHeight: 32,
-    textAlign: "center",
-    color: "black",
+    textAlign: 'center',
+    color: 'black',
     fontSize: 28,
   },
   name: {
-    color: "blue",
-    fontWeight: "bold",
+    color: 'blue',
+    fontWeight: 'bold',
     paddingLeft: 8,
-    display: "inline-block",
+    display: 'inline-block',
   },
   item: {
     padding: 16,
     marginVertical: 8,
-    backgroundColor: "green",
+    backgroundColor: 'green',
     flex: 1,
     borderRadius: 16,
   },

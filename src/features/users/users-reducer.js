@@ -5,7 +5,7 @@ const slice = 'users';
 const initialState = { users: [], loading: false };
 
 export const {
-  actions: { updateUsers },
+  actions: { updateUsers, fetchingUsers },
   reducer,
 } = createSlice({
   name: slice,
@@ -13,6 +13,10 @@ export const {
   reducers: {
     updateUsers: (state, { payload }) => {
       state.users = payload;
+      state.loading = false;
+    },
+    fetchingUsers: state => {
+      state.loading = true;
     },
   },
 });
@@ -21,8 +25,9 @@ export const {
  * SELECTORS
  */
 
-const getUsersSlice = (state) => state[slice];
+const getUsersSlice = state => state[slice];
 
 const selectUsers = pipe(getUsersSlice, prop('users'));
+const selectFetchingUsers = pipe(getUsersSlice, prop('loading'));
 
-export { selectUsers, slice };
+export { selectUsers, selectFetchingUsers, slice };
