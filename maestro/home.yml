@@ -1,4 +1,17 @@
-appId: com.onboarding.app # This is an example app id. Replace it with your app id.
+appId: com.onboarding.app
 ---
-- launchApp
-- assertVisible: 'Submit'
+- launchApp:
+    clearState: true
+- tapOn: 'Enter Name'
+- inputText: 'Snow'
+- tapOn: 'Submit Name'
+- assertVisible: 'My name is Snow'
+
+- runFlow:
+    when:
+      visible: 'Users, tab, 1 of 2'
+    commands:
+      - tapOn: 'Users, tab, 1 of 2'
+
+- runFlow:
+    file: 'users.yml'

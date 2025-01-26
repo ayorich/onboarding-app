@@ -7,8 +7,7 @@ export function ProfileScreenComponent({ profileName }) {
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
         <Text style={styles.text}>
-          My name is
-          <Text style={styles.name}>{profileName}</Text>
+          My name is <Text style={styles.name}>{profileName}</Text>
         </Text>
       </SafeAreaView>
     </SafeAreaProvider>

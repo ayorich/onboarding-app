@@ -4,15 +4,15 @@ import { StyleSheet } from 'react-native';
 export function OnboardingFormComponent({ name, onChangeText, onSubmit }) {
   return (
     <>
-      <Text>Submit</Text>
       <Input
         placeholder="Enter Name"
         style={styles.input}
         value={name}
         onChangeText={onChangeText}
+        type="text"
       />
       <Button size="lg" onPress={() => onSubmit(name.trim())}>
-        {name ? 'Update' : 'Submit Name'}
+        Submit Name
       </Button>
     </>
   );

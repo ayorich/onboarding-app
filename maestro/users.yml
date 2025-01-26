@@ -1,0 +1,5 @@
+appId: com.onboarding.app
+---
+- assertVisible: 'Refetch Users'
+- scroll
+- tapOn: 'Refetch Users'
