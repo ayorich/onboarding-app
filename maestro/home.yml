@@ -5,6 +5,7 @@ appId: com.onboarding.app
 - tapOn: 'Enter Name'
 - inputText: 'Snow'
 - tapOn: 'Submit Name'
+
 - assertVisible: 'My name is Snow'
 
 - runFlow:

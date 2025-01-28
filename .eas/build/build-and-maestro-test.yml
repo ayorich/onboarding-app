@@ -6,3 +6,4 @@ build:
         inputs:
           flow_path: |
             maestro/home.yml
+            maestro/users.yml

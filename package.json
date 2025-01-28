@@ -10,7 +10,8 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "test:e2e": "maestro test maestro/*"
+    "test:e2e": "maestro test maestro/*",
+    "build:ios": "eas build --platform ios --profile build-and-maestro-test"
   },
   "jest": {
     "preset": "jest-expo",
